@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Noticias 24HRS</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css"
+  </head>
+  <body>
+{{>_navbar}}
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h3><center>Noticias do Brasil</center></h3>
+      <hr>
+      {{#each brData.articles}}
+    <div class="card d-flex mt-4">
+        <div class="card-body mt-4" style="text-align: center;">
+            <nav class="titulo" style="height: 200px;">
+            <h4>{{title}}</h4>
+            </nav>
+            <nav class="conteudo" style="height: 250px;">
+            <h5>{{content}}</h5><br>
+            </nav>
+                <figure>
+                    <img src=" {{urlToImage}} " class="figure-img img-fluid" style="height: 200px; width: auto;" alt="">
+                </figure>
+                <a href="{{url}}"><button class="btn btn-success" name="button">Leia Mais</button></a>
+                <hr>
+        </div>
+    </div>
+    
+
+    {{else}}
+
+
+    {{/each}}
+    </div>
+    <div class="col-sm">
+      <h3><center>Noticias dos USA</center></h3>
+      <hr>
+      {{#each usData.articles}}
+    <div class="card d-flex mt-4">
+        <div class="card-body mt-4" style="text-align: center;">
+            <nav class="titulo" style="height: 200px;">
+            <h4>{{title}}</h1>
+            </nav>
+            <nav class="conteudo" style="height: 250px;">
+            <h5>{{content}}</h2><br>
+            </nav>
+                <figure>
+                    <img src=" {{urlToImage}} " class="figure-img img-fluid" style="height: 200px; width: auto;" alt="">
+                </figure>
+                <a href="{{url}}"><button class="btn btn-success" name="button">Leia Mais</button></a>
+                <hr>
+        </div>
+    </div>
+    
+
+    {{else}}
+
+
+    {{/each}}
+    </div>
+    <div class="col-sm">
+      <h3><center>Economia Global</center></h3>
+      <hr>
+      {{#each economy.articles}}
+    <div class="card d-flex mt-4">
+        <div class="card-body mt-4" style="text-align: center;">
+            <nav class="titulo" style="height: 200px;">
+            <h4>{{title}}</h1>
+            </nav>
+            <nav class="conteudo" style="height: 250px;">
+            <h5>{{content}}</h2><br>
+            </nav>
+                <figure>
+                    <img src=" {{urlToImage}} " class="figure-img img-fluid" style="height: 200px; width: auto;" alt="">
+                </figure>
+                <a href="{{url}}"><button class="btn btn-success" name="button">Leia Mais</button></a>
+                <hr>
+        </div>
+    </div>
+    
+
+    {{else}}
+
+
+    {{/each}}
+    </div>
+  </div>
+</div>
+
+
+      
+    
+    
+  </body>
+  <style>
+    
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
